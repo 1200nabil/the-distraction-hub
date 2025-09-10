@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Distraction Hub</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧠</text></svg>">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-particles" id="particles"></div>
+  
+  <button class="mode-toggle" onclick="toggleMode()" aria-label="Toggle theme">
+    <span id="modeIcon">🌙</span>
+  </button>
+
+  <div class="container">
+    <div class="header-section">
+      <h1><i class="fa-solid fa-hourglass-start"></i> The Distraction Hub <i class="fa-solid fa-hourglass-start"></i></h1>
+      <p class="subtitle"><i class="fa-solid fa-skull-crossbones"></i> where productivity goes to die <i class="fa-solid fa-skull-crossbones"></i></p>
+    </div>
+
+    <div class="stats-bar">
+      <div class="stat-item">
+        <div class="stat-number" id="timeWasted">0</div>
+        <div class="stat-label">Seconds Wasted</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" id="clickCount">0</div>
+        <div class="stat-label">Clicks Made</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" id="hoversCount">0</div>
+        <div class="stat-label">Hovers</div>
+      </div>
+    </div>
+
+    <div class="button-grid">
+      <a class="button-card" href="https://www.youtube.com" target="_blank" 
+         onmouseover="updateJoke('Falling into the infinite scroll conspiracy theories!')" 
+         onclick="incrementClicks()">
+        <div class="card-content">
+          <span class="card-icon"><i class="fab fa-youtube"></i></span>
+          <div class="card-title">YouTube</div>
+          <div class="card-description">where 5 minutes becomes 5 hours</div>
+        </div>
+      </a>
+
+      <a class="button-card" href="https://1200nabil.github.io" target="_blank" 
+         onmouseover="updateJoke('Just one more game... said 3 hours ago.')" 
+         onclick="incrementClicks()">
+        <div class="card-content">
+          <span class="card-icon"><i class="fas fa-gamepad"></i></span>
+          <div class="card-title">NabilGames</div>
+          <div class="card-description">casual games, serious addiction</div>
+        </div>
+      </a>
+
+      <a class="button-card" href="https://instagram.com" target="_blank" 
+         onmouseover="updateJoke('Checking if anyone messaged... they did not.')" 
+         onclick="incrementClicks()">
+        <div class="card-content">
+          <span class="card-icon"><i class="fab fa-instagram"></i></span>
+          <div class="card-title">Instagram</div>
+          <div class="card-description">pretending to be social</div>
+        </div>
+      </a>
+
+      <a class="button-card" href="https://tiktok.com" target="_blank" 
+         onmouseover="updateJoke('Scrolling through the for you page for the 47th time today..')" 
+         onclick="incrementClicks()">
+        <div class="card-content">
+          <span class="card-icon"><i class="fa-brands fa-tiktok"></i></span>
+          <div class="card-title">TikTok</div>
+          <div class="card-description">the front page of procrastination</div>
+        </div>
+      </a>
+
+      <a class="button-card" href="https://chat.openai.com" target="_blank" 
+         onmouseover="updateJoke('Asking ChatGPT to do your work while you avoid actually doing your work.')" 
+         onclick="incrementClicks()">
+        <div class="card-content">
+          <span class="card-icon"><i class="fa-solid fa-robot"></i></span>
+          <div class="card-title">ChatGPT</div>
+          <div class="card-description">your AI-powered excuse generator</div>
+        </div>
+      </a>
+
+      <a class="button-card" href="https://www.google.com" target="_blank" 
+         onmouseover="updateJoke('Googling how to be productive.. why not?')" 
+         onclick="incrementClicks()">
+        <div class="card-content">
+          <span class="card-icon"><i class="fa-brands fa-google"></i></span>
+          <div class="card-title">Google</div>
+          <div class="card-description">the gateway to infinite rabbit holes</div>
+        </div>
+      </a>
+
+    </div>
+
+    <div class="joke-section">
+      <div class="joke-text" id="jokeText">
+        Hover over a button to unlock a new level of productivity destruction.
+      </div>
+    </div>
+<hr>
+        <footer class="footer">
+        <div class="container">
+            <p>© 2025 nabil khondaker - all rights reserved.</p>
+            <p class="text-gradient">made with ❤️ by nabil</p>
+        </div>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
